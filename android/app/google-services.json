@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460939942308",
+    "project_id": "learning-d432b",
+    "storage_bucket": "learning-d432b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460939942308:android:cd1e209ec8f606bb69c931",
+        "android_client_info": {
+          "package_name": "com.pulsezest.pulsezest_testing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlqxEqJcmWUAFl-MD-64gfUT0gFtOdL3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
