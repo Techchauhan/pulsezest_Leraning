@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:pulsezest_testing/CloudFireStore/FetchDetailsCloud.dart';
+import 'package:pulsezest_testing/CloudFireStore/addDetailsCloud.dart';
+import 'package:pulsezest_testing/CloudFireStore/setDataInsideDocument.dart';
 
 class CloudFirestore extends StatefulWidget {
   const CloudFirestore({super.key});
@@ -29,7 +32,19 @@ class _CloudFirestoreState extends State<CloudFirestore> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(onPressed: addUser, child: Text("ADD user"))
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AddDetailsCloud()));
+                }, child: const Text("ADD user")
+                ),
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SetDataInDocumentPage()));
+                }, child: const Text("Set Details Inside Documents")
+                ),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>FetchAllUsersCloud()));
+                }, child: const Text("Fetch User")
+                ),
               ],
             ),
       ),

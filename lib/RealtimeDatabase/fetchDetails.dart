@@ -70,7 +70,7 @@ class _DetailsListState extends State<DetailsList> {
       itemBuilder: (context, index) {
         var detail = _details[index];
         return ListTile(
-          title: Text(detail['firstName'] + " " + detail['lastName'] ?? ''),
+          title: Text(detail['name'] + " " + detail['lastName'] ?? ''),
           subtitle: Text('Num: ' + detail['Number'] ?? ''),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,

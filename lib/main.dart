@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pulsezest_testing/CloudFirestore.dart';
 import 'package:pulsezest_testing/RealtimeDatabase.dart';
+import 'package:pulsezest_testing/dummy.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -48,7 +49,13 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>RealtimeDatabase()));
             }, child: const Text("Real time Database")),
             const SizedBox(height: 10,),
-            ElevatedButton(onPressed: (){}, child: const Text("Cloud fireStore"))
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const CloudFirestore()));
+            }, child: const Text("Cloud fireStore")),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const Summarise()));
+            }, child: const Text("Summarise"))
+
           ],
         ),
       ),

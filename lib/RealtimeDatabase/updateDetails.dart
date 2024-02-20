@@ -19,7 +19,7 @@ class _UpdateDetailsPageState extends State<UpdateDetailsPage> {
   @override
   void initState() {
     super.initState();
-    _firstNameController = TextEditingController(text: widget.details['firstName']);
+    _firstNameController = TextEditingController(text: widget.details['name']);
     _lastNameController = TextEditingController(text: widget.details['lastName']);
     _numberController = TextEditingController(text: widget.details['Number']);
     _ref = FirebaseDatabase.instance.reference().child('posts');
@@ -38,7 +38,7 @@ class _UpdateDetailsPageState extends State<UpdateDetailsPage> {
       // Extracting the ID from details map
       var id = widget.details['id'];
       _ref.child(id).update({
-        'firstName': _firstNameController.text,
+        'name': _firstNameController.text,
         'lastName': _lastNameController.text,
         'Number': _numberController.text,
       }).then((_) {
